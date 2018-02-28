@@ -7,9 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 from xgboost.sklearn import XGBRegressor
 from sklearn.ensemble import GradientBoostingRegressor
 
-print("\n")
 df = pd.read_csv("abalone.data", names=["sex", "length", "diameter", "height", "whole weight", "shucked weight", "viscera weight", "shell weight", "rings"])
-df.drop(["sex"],axis=1)
 
 le = LabelEncoder()
 le.fit(df.sex)
